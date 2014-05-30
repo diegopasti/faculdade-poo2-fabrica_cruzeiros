@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Fábrica de Cruzeiros : Repositório dos Códigos desenvolvidos para a implementação do exercício da 1ª Prova de Programação orientada à objetos 2" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Fábrica de Cruzeiros</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/diegopasti/faculdade-poo2-fabrica_cruzeiros">View on GitHub</a>
+
+          <h1 id="project_title">Fábrica de Cruzeiros</h1>
+          <h2 id="project_tagline">Repositório dos Códigos desenvolvidos para a implementação do exercício da 1ª Prova de Programação orientada à objetos 2</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/diegopasti/faculdade-poo2-fabrica_cruzeiros/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/diegopasti/faculdade-poo2-fabrica_cruzeiros/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a name="descri%C3%A7%C3%A3o-do-projeto" class="anchor" href="#descri%C3%A7%C3%A3o-do-projeto"><span class="octicon octicon-link"></span></a>Descrição do Projeto</h2>
+
+<p>O projeto Fábrica de Cruzeiros é a implementação na linguagem JAVA de um exercício cobrado na primeira avaliação da disciplina de Programação Orientada à Objetos 2, ministrada pelo professor Paulo Sérgio.</p>
+
+<h2>
+<a name="principios-utilizados" class="anchor" href="#principios-utilizados"><span class="octicon octicon-link"></span></a>Principios utilizados</h2>
+
+<p>O Projeto foi desenvolvido seguindo os princípios de padrões de projeto que prioriza a utilização de interfaces e composição(no lugar de herança).</p>
+
+<h2>
+<a name="padr%C3%B5es-de-projeto" class="anchor" href="#padr%C3%B5es-de-projeto"><span class="octicon octicon-link"></span></a>Padrões de Projeto</h2>
+
+<p>O Projeto foi implementado utilizando essencialmente 4 padrões de projetos, sendo eles: Construtor(Builder), Método Fábrica (Factory Method), Protótipo (Prototype) e Singular (Singleton). Segue a descrição de como eles  foram combinados e implementados:</p>
+
+<h3>
+<a name="construtor" class="anchor" href="#construtor"><span class="octicon octicon-link"></span></a>Construtor</h3>
+
+<p>O padrão Construtor foi utilizado para montar cada componente do cruzeiro, é por meio dele que as cabines do comandante e de passageiros, motor e botes salva vidas podem ser inseridas no cruzeiro. Possui ainda o método que finaliza e retorna o cruzeiro pronto. Para cada tipo de Cruzeiro existe um Construtor especifico que possui as medidas e ajuste específicos para cada tipo de Cruzeiro. Uma interface Construtor é criada para garantir que todo construtor seja capaz de construir um Cruzeiro de forma adequada dessa forma pode ser possível criar novos tipos de cruzeiros por meio de novos construtores sem afetar os que já existem. Dessa forma o sistema ganha em Flexibilidade e Manutenabilidade. </p>
+
+<h3>
+<a name="prot%C3%B3tipo" class="anchor" href="#prot%C3%B3tipo"><span class="octicon octicon-link"></span></a>Protótipo</h3>
+
+<p>O padrão protótipo foi utilizado nas estruturas Cruzeiros e nos Componentes(Motores,Cabines e Botes) em virtude da necessidade de economia de memória em tempo de execução do sistema. Como em cada Cruzeiro determinadas estruturas como Cabines e Botes podem ser necessário uma quantidade muito grande para se montar no Cruzeiro, clonar as estruturas é uma opção muito mais rápida e eficiente do que a instanciação de novas estruturas. <em>A mesma ideia é utilizada para a construção dos Cruzeiros em si, onde dado que algum cruzeiro já tenha sido construido não seria necessário acionar o construtor para iniciar o processo de construção (e instanciação) de um novo cruzeiro e seus componentes bastando apenas a clonagem do modelo já pronto.</em>* Com essa estratégia o sistema tem ganho razoável de performance.</p>
+
+<ul>
+<li>É de conhecimento que a clonagem de uma estrutura composta apenas clona a estrutura em si. Atributos como as listas (e suas variações) de componentes foram clonadas manualmente quando o Cruzeiro em si era clonado.</li>
+</ul><h3>
+<a name="m%C3%A9todo-fabrica-e-singular" class="anchor" href="#m%C3%A9todo-fabrica-e-singular"><span class="octicon octicon-link"></span></a>Método Fabrica e Singular</h3>
+
+<p>Os padrões de projeto Método Fabrica e Singular são utilizado na mesma estrutura (Seletor de Cruzeiros) e têm a função de garantir que a classe responsável por fornecer os Cruzeiros seja única. Com o padrão Método Fabrica modelos específicos de Cruzeiros podem ser obtidos de acordo com o parâmetro passado a ela e com isso tem-se melhoras na manutenabilidade do sistema , visto que a instanciação dos objetos esta contida no Construtores e Seletor de Cruzeiro diminuindo o risco de que alguma modificação possa afetar alguma outra parte do sistema.</p>
+
+<h2>
+<a name="modelagem" class="anchor" href="#modelagem"><span class="octicon octicon-link"></span></a>Modelagem</h2>
+
+<p>O projeto ainda foi desenvolvido seguindo um modelo UML que prescrevia a estrutura do projeto e a forma como os padrões foram combinados.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Fábrica de Cruzeiros maintained by <a href="https://github.com/diegopasti">diegopasti</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
