@@ -9,8 +9,7 @@ public class app {
 		System.out.println("Sistema > Bem vindo");
 		Seletor.INSTANCE.SelecionarCruzeiro(TipoCruzeiros.GRANDE.toString());
 		Seletor.INSTANCE.SelecionarCruzeiro(TipoCruzeiros.MEDIO.toString());
-		Seletor.INSTANCE.SelecionarCruzeiro(TipoCruzeiros.PEQUENO.toString());
-		
+		Seletor.INSTANCE.SelecionarCruzeiro(TipoCruzeiros.PEQUENO.toString());		
 	}
 
 }
