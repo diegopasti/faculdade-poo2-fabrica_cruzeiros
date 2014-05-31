@@ -8,7 +8,8 @@ import componente.cabine.CabinePassageiro;
 import componente.motor.Motor;
 
 public class CruzeiroAbstrato implements Cruzeiro{
-
+	
+	public String Tipo;
 	protected CabineComandante CabineComandante;
 	protected ArrayList<CabinePassageiro> CabinesPassageiros;
 	protected ArrayList<Bote> Botes;
@@ -54,11 +55,11 @@ public class CruzeiroAbstrato implements Cruzeiro{
 		this.CabinesPassageiros = listaCabines;
 		
 	}
-
+	
 	@Override
-	public Object Clone() {
+	public Cruzeiro clone() {
 		try{
-			return super.clone();	
+			return (Cruzeiro)super.clone();	
 		}
 		catch(Exception e){
 			return null;

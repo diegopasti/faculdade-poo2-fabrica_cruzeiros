@@ -2,14 +2,13 @@ package cruzeiro;
 
 import java.util.ArrayList;
 
-import utils.Clonavel;
 import componente.bote.Bote;
 import componente.cabine.CabineComandante;
 import componente.cabine.CabinePassageiro;
 import componente.motor.Motor;
 
-public interface Cruzeiro extends Clonavel {
-
+public interface Cruzeiro extends Cloneable{
+	
 	public Motor getMotor();
 	public void setMotor(Motor motor);
 	
@@ -20,6 +19,8 @@ public interface Cruzeiro extends Clonavel {
 	public void setCabineComandante(CabineComandante cabine);
 	
 	public ArrayList<CabinePassageiro> getCabinesPassageiros();
-	public void setCabinesPassageiros(ArrayList<CabinePassageiro> listaCabines);	
+	public void setCabinesPassageiros(ArrayList<CabinePassageiro> listaCabines);
+	
+	
 	
 }

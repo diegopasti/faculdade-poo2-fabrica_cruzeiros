@@ -7,11 +7,17 @@ public class CabineAbstrata implements Cabine {
 	public int getCapacidade(){
 		return this.Capacidade;
 	}
+		
+	
 	
 	@Override
-	public Object Clone() {
-		// TODO Auto-generated method stub
-		return null;
+	public Cabine clone() {
+		
+		try{
+			return (Cabine) super.clone();	
+		}
+		catch(Exception e){
+			return null;
+		}
 	}
-	
 }

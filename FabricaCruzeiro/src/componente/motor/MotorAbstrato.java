@@ -18,9 +18,13 @@ public class MotorAbstrato implements Motor{
 		Tipo = tipo;
 	}
 	@Override
-	public Object Clone() {
-		return null;
-		
+	public Motor clone() {
+		try{
+			return (Motor) super.clone();	
+		}
+		catch(Exception e){
+			return null;
+		}
 	}
 	
 }

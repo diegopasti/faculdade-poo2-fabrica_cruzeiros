@@ -8,4 +8,6 @@ public interface Motor extends Componente {
 	
 	public void setTipo(String tipo);
 	public String getTipo();
+	public Motor clone();
+	
 }

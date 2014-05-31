@@ -24,7 +24,7 @@ public class ConstrutorCruzeiroPequeno extends ConstrutorCruzeiroAbstrato {
 			this.Cruzeiro.setMotor(this.ModeloMotor);
 		}
 		else{
-			this.Cruzeiro.setMotor((Motor) this.ModeloMotor.Clone());
+			this.Cruzeiro.setMotor((Motor) this.ModeloMotor.clone());
 		}
 		System.out.println("Construtor > Motor de "+this.ModeloMotor.getPotencia()+"hp foi Adicionado com Sucesso.");
 	}
@@ -36,7 +36,7 @@ public class ConstrutorCruzeiroPequeno extends ConstrutorCruzeiroAbstrato {
 			this.Cruzeiro.setCabineComandante(this.ModeloCabineComandante);
 		}
 		else{
-			this.Cruzeiro.setCabineComandante((CabineComandante) this.ModeloCabineComandante.Clone());
+			this.Cruzeiro.setCabineComandante((CabineComandante) this.ModeloCabineComandante.clone());
 		}
 		System.out.println("Construtor > Cabine do Comandante foi Adicionado com Sucesso.");
 	}
@@ -49,7 +49,7 @@ public class ConstrutorCruzeiroPequeno extends ConstrutorCruzeiroAbstrato {
 		
 		ArrayList<CabinePassageiro> Cabines = new ArrayList<CabinePassageiro>();
 		for(int n=0; n < 10; n++){
-			Cabines.add((CabinePassageiro) this.ModeloCabinePassageiro.Clone());
+			Cabines.add((CabinePassageiro) this.ModeloCabinePassageiro.clone());
 		}
 		
 		this.Cruzeiro.setCabinesPassageiros(Cabines);
@@ -64,7 +64,7 @@ public class ConstrutorCruzeiroPequeno extends ConstrutorCruzeiroAbstrato {
 		
 		ArrayList<Bote> Botes = new ArrayList<Bote>();
 		for(int n=0; n < 5; n++){
-			Botes.add((Bote) this.ModeloBote.Clone());
+			Botes.add((Bote) this.ModeloBote.clone());
 		}
 		
 		this.Cruzeiro.setBote(Botes);
