@@ -36,6 +36,9 @@ public enum Seletor {
 				Diretor Diretor = new DiretorCruzeiro();
 				CruzeiroPequeno = (CruzeiroPequeno) Diretor.ConstruirCruzeiro(new ConstrutorCruzeiroPequeno());
 			}
+			else{
+				System.out.println("Construtor > Clonando Cruzeiro Pequeno.");
+			}
 			
 			cp = (CruzeiroPequeno) CruzeiroPequeno.clone();
 
@@ -53,6 +56,9 @@ public enum Seletor {
 			if(CruzeiroMedio == null){
 				Diretor Diretor = new DiretorCruzeiro();
 				CruzeiroMedio = (CruzeiroMedio) Diretor.ConstruirCruzeiro(new ConstrutorCruzeiroMedio());
+			}
+			else{
+				System.out.println("Construtor > Clonando Cruzeiro Medio.");
 			}
 			
 			// clone das Subestruturas da classe Cruzeiro
@@ -72,6 +78,11 @@ public enum Seletor {
 				Diretor Diretor = new DiretorCruzeiro();
 				CruzeiroGrande = (CruzeiroGrande) Diretor.ConstruirCruzeiro(new ConstrutorCruzeiroGrande());
 			}
+			
+			else{
+				System.out.println("Construtor > Clonando Cruzeiro Grande.");
+			}
+			
 			// clone das Subestruturas da classe Cruzeiro
 			cg = (CruzeiroGrande) CruzeiroGrande.clone();
 			cg.setCabineComandante((CabineComandante) CruzeiroGrande.getCabineComandante().clone());						
